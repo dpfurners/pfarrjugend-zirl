@@ -4,29 +4,68 @@
 
 <section class="pt-16 lg:py-24">
   <div class="max-w-7xl mx-auto px-4 xl:px-0">
-    <div class="flex flex-col items-start gap-6 pb-16 lg:w-7/12">
-      <div class="inline-flex items-center justify-center rounded-full bg-white px-3 py-1 text-sm font-medium text-neutral-700 shadow-[0_2px_10px_0px_rgba(0,0,0,0.15)]">
-        Pfarrjugend Zirl
+    <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div class="flex flex-col items-start gap-6">
+        <div class="inline-flex items-center justify-center rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-700 shadow-[0_2px_10px_0px_rgba(0,0,0,0.12)]">
+          Pfarrjugend Zirl
+        </div>
+        <h1 class="bg-gradient-to-b from-emerald-950 to-emerald-600 bg-clip-text text-4xl font-semibold text-transparent lg:text-6xl lg:leading-tight">
+          Gemeinschaft, Glaube & Aktionen für Jugendliche in Zirl
+        </h1>
+        <p class="max-w-2xl text-base font-medium text-slate-600 lg:text-lg">
+          Wir treffen uns, gestalten Projekte und feiern gemeinsam. Hier findest du News,
+          kommende Termine und alle wichtigen Infos auf einen Blick.
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a
+            href="#news"
+            class="flex items-center justify-center rounded-[0.625rem] bg-emerald-600 px-4 py-2.5 text-sm font-medium text-white shadow-[0_2px_10px_0px_rgba(16,185,129,0.3)] transition hover:bg-emerald-500"
+          >
+            Zu den News
+          </a>
+          <a
+            href="#termine"
+            class="flex items-center justify-center rounded-[0.625rem] border border-emerald-200 bg-white px-4 py-2.5 text-sm font-medium text-emerald-700 shadow-[0_2px_10px_0px_rgba(0,0,0,0.05)] transition hover:border-emerald-300 hover:bg-emerald-50"
+          >
+            Kommende Termine
+          </a>
+        </div>
       </div>
-      <h1 class="bg-gradient-to-b from-slate-900 to-slate-600 bg-clip-text text-4xl font-semibold text-transparent lg:text-6xl lg:leading-tight">
-        Gemeinschaft, Glaube & Aktionen für Jugendliche in Zirl
-      </h1>
-      <p class="max-w-2xl text-base font-medium text-slate-600 lg:text-lg">
-        Wir treffen uns, gestalten Projekte und feiern gemeinsam. Hier findest du News,
-        kommende Termine und alle wichtigen Infos auf einen Blick.
-      </p>
-      <div class="flex flex-wrap items-center gap-3">
+
+      <div class="grid gap-6 sm:grid-cols-2">
         <a
           href="#news"
-          class="flex items-center justify-center rounded-[0.625rem] bg-slate-900 px-4 py-2.5 text-sm font-medium text-white shadow-[0_2px_10px_0px_rgba(0,0,0,0.2)] transition hover:bg-slate-800"
+          class="group rounded-3xl border border-emerald-100 bg-white/95 p-5 shadow-[0_12px_40px_0px_rgba(15,23,42,0.1)] transition hover:-translate-y-1"
         >
-          Zu den News
+          <img
+            class="h-40 w-full rounded-2xl object-cover"
+            src="/images/news-preview.svg"
+            alt="Vorschau auf News der Pfarrjugend"
+          />
+          <div class="mt-4">
+            <p class="text-xs font-semibold uppercase tracking-wide text-emerald-600">News</p>
+            <h2 class="mt-2 text-lg font-semibold text-slate-900">Neuigkeiten & Rückblicke</h2>
+            <p class="mt-2 text-sm text-slate-600">
+              Berichte, Fotos und Updates aus unserer Pfarrjugend.
+            </p>
+          </div>
         </a>
         <a
           href="#termine"
-          class="flex items-center justify-center rounded-[0.625rem] border border-neutral-200 bg-white px-4 py-2.5 text-sm font-medium text-neutral-700 shadow-[0_2px_10px_0px_rgba(0,0,0,0.05)] transition hover:border-neutral-300 hover:bg-neutral-100"
+          class="group rounded-3xl border border-emerald-100 bg-white/95 p-5 shadow-[0_12px_40px_0px_rgba(15,23,42,0.1)] transition hover:-translate-y-1"
         >
-          Kommende Termine
+          <img
+            class="h-40 w-full rounded-2xl object-cover"
+            src="/images/upcoming-preview.svg"
+            alt="Vorschau auf kommende Termine"
+          />
+          <div class="mt-4">
+            <p class="text-xs font-semibold uppercase tracking-wide text-emerald-600">Upcoming</p>
+            <h2 class="mt-2 text-lg font-semibold text-slate-900">Treffen & Aktionen</h2>
+            <p class="mt-2 text-sm text-slate-600">
+              Alle nächsten Termine auf einen Blick.
+            </p>
+          </div>
         </a>
       </div>
     </div>
