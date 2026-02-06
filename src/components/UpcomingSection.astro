@@ -1,0 +1,58 @@
+---
+const upcomingEvents = [
+  {
+    title: 'Jugendabend & Austausch',
+    date: 'Freitag, 22. November · 19:00 Uhr',
+    location: 'Pfarrsaal Zirl',
+    details: 'Offener Treff mit Spielen, Snacks und Raum für eure Ideen.'
+  },
+  {
+    title: 'Friedenslicht verteilen',
+    date: 'Samstag, 14. Dezember · 16:00 Uhr',
+    location: 'Pfarrkirche Zirl',
+    details: 'Gemeinsam bringen wir das Friedenslicht in die Gemeinde.'
+  },
+  {
+    title: 'Winterwanderung',
+    date: 'Sonntag, 12. Januar · 14:30 Uhr',
+    location: 'Treffpunkt Widum',
+    details: 'Warme Kleidung nicht vergessen – danach gibt es Tee & Gebäck.'
+  }
+];
+---
+
+<section id="termine" class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 xl:px-0">
+    <div class="rounded-3xl border border-white/60 bg-white/90 p-8 shadow-[0_12px_40px_0px_rgba(15,23,42,0.12)] lg:p-12">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <p class="text-sm font-semibold text-slate-600">Upcoming</p>
+          <h2 class="mt-2 text-3xl font-semibold text-slate-900 lg:text-4xl">
+            Kommende Termine
+          </h2>
+          <p class="mt-3 max-w-2xl text-base text-slate-600">
+            Eine Übersicht der nächsten Treffen und Aktionen. Diese Liste ist der Einstieg
+            für eine eigene „Upcoming“-Seite.
+          </p>
+        </div>
+        <a
+          class="inline-flex items-center justify-center rounded-[0.625rem] bg-slate-900 px-4 py-2.5 text-sm font-medium text-white shadow-[0_2px_10px_0px_rgba(15,23,42,0.25)] transition hover:bg-slate-800"
+          href="mailto:pfarrjugend@pfarre-zirl.at"
+        >
+          Termin einreichen
+        </a>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        {upcomingEvents.map((event) => (
+          <article class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">{event.date}</p>
+            <h3 class="mt-2 text-xl font-semibold text-slate-900">{event.title}</h3>
+            <p class="mt-2 text-sm font-medium text-slate-700">{event.location}</p>
+            <p class="mt-3 text-sm text-slate-600">{event.details}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+---
+const newsItems = [
+  {
+    title: 'Spieleabend im Pfarrsaal',
+    date: '15. November 2024',
+    description:
+      'Wir starten ab 18:30 Uhr mit Klassikern, neuen Spielen und Snacks. Bring gerne dein Lieblingsspiel mit.'
+  },
+  {
+    title: 'Adventaktion: Kekse & Kerzen',
+    date: '01. Dezember 2024',
+    description:
+      'Gemeinsam backen, basteln und Zeit verbringen. Treffpunkt ist der Pfarrsaal, Anmeldung bis 25.11.'
+  },
+  {
+    title: 'Rückblick: Sommerlager 2024',
+    date: '20. August 2024',
+    description:
+      'Fotos, Highlights und Danke an alle Helfer:innen – das Lager war ein voller Erfolg!'
+  }
+];
+---
+
+<section id="news" class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 xl:px-0">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div>
+        <p class="text-sm font-semibold text-slate-600">Aktuelles</p>
+        <h2 class="mt-2 text-3xl font-semibold text-slate-900 lg:text-4xl">
+          News aus der Pfarrjugend Zirl
+        </h2>
+        <p class="mt-3 max-w-2xl text-base text-slate-600">
+          Hier findest du die neuesten Updates, Aktionen und Rückblicke. Neue Beiträge lassen sich
+          einfach ergänzen, indem du eine weitere News-Karte hinzufügst.
+        </p>
+      </div>
+      <a
+        class="inline-flex items-center justify-center rounded-[0.625rem] border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 shadow-[0_2px_10px_0px_rgba(0,0,0,0.05)] transition hover:border-slate-300 hover:bg-slate-100"
+        href="mailto:pfarrjugend@pfarre-zirl.at"
+      >
+        News vorschlagen
+      </a>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      {newsItems.map((item) => (
+        <article class="rounded-2xl border border-white/50 bg-white/90 p-6 shadow-[0_8px_30px_0px_rgba(15,23,42,0.08)]">
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">{item.date}</p>
+          <h3 class="mt-3 text-xl font-semibold text-slate-900">{item.title}</h3>
+          <p class="mt-3 text-sm text-slate-600">{item.description}</p>
+          <a
+            class="mt-5 inline-flex items-center text-sm font-semibold text-slate-700"
+            href="mailto:pfarrjugend@pfarre-zirl.at"
+          >
+            Mehr erfahren
+            <span class="ml-2">→</span>
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

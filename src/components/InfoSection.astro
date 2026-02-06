@@ -1,0 +1,83 @@
+---
+const infoItems = [
+  {
+    title: 'Wer wir sind',
+    description:
+      'Die Pfarrjugend Zirl ist offen für alle Jugendlichen ab 14 Jahren. Wir gestalten Freizeit, Glauben und Gemeinschaft.'
+  },
+  {
+    title: 'Wann wir uns treffen',
+    description:
+      'Jugendabend jeden zweiten Freitag um 19:00 Uhr im Pfarrsaal. Abweichungen findest du bei den News.'
+  },
+  {
+    title: 'Kontakt & Anmeldung',
+    description:
+      'Schreib uns unter pfarrjugend@pfarre-zirl.at oder melde dich direkt beim Team im Widum.'
+  }
+];
+
+const quickFacts = [
+  {
+    label: 'Treffpunkt',
+    value: 'Pfarrsaal Zirl, Kirchplatz 1'
+  },
+  {
+    label: 'Altersgruppe',
+    value: 'Ab 14 Jahren'
+  },
+  {
+    label: 'Instagram',
+    value: '@pfarrjugend.zirl'
+  }
+];
+---
+
+<section id="infos" class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 xl:px-0">
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+      <div>
+        <p class="text-sm font-semibold text-slate-600">Wichtige Infos</p>
+        <h2 class="mt-2 text-3xl font-semibold text-slate-900 lg:text-4xl">
+          Alles Wichtige auf einen Blick
+        </h2>
+        <p class="mt-3 max-w-2xl text-base text-slate-600">
+          So findet ihr uns, so erreicht ihr uns – und so könnt ihr sofort mitmachen.
+        </p>
+
+        <div class="mt-8 space-y-6">
+          {infoItems.map((item) => (
+            <div class="rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-[0_10px_30px_0px_rgba(15,23,42,0.08)]">
+              <h3 class="text-lg font-semibold text-slate-900">{item.title}</h3>
+              <p class="mt-2 text-sm text-slate-600">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <aside class="rounded-3xl border border-white/60 bg-white/95 p-8 shadow-[0_12px_40px_0px_rgba(15,23,42,0.12)]">
+        <h3 class="text-xl font-semibold text-slate-900">Schnelle Fakten</h3>
+        <div class="mt-6 space-y-4">
+          {quickFacts.map((fact) => (
+            <div class="flex items-start justify-between gap-4">
+              <span class="text-sm font-medium text-slate-500">{fact.label}</span>
+              <span class="text-sm font-semibold text-slate-900 text-right">{fact.value}</span>
+            </div>
+          ))}
+        </div>
+        <div class="mt-8 rounded-2xl bg-slate-900 px-5 py-4 text-white">
+          <p class="text-sm font-semibold">Du willst mitmachen?</p>
+          <p class="mt-2 text-sm text-slate-200">
+            Schreib uns eine Nachricht und komm einfach beim nächsten Jugendabend vorbei.
+          </p>
+          <a
+            class="mt-4 inline-flex items-center text-sm font-semibold text-white"
+            href="mailto:pfarrjugend@pfarre-zirl.at"
+          >
+            Jetzt Kontakt aufnehmen →
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
