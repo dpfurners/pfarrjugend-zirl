@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const newsItems = [
+  {
+    title: 'Jungschar Fasching',
+    date: '06. Februar 2026',
+    summary: 'Bunte Kostüme, Spiele und viel Spaß im Pfarrsaal.',
+    image: '/images/news-preview.svg',
+    link: '/news/jungschar-fasching-2026'
+  },
+  {
+    title: 'Sternsingen 2026',
+    date: '03.–06. Januar 2026',
+    summary: 'Wir haben den Segen in die Häuser gebracht. Danke für eure Unterstützung!',
+    image: '/images/news-preview.svg',
+    link: '/news/sternsingen-2026'
+  },
+  {
+    title: 'Rückblick: Sommerlager 2024',
+    date: '20. August 2024',
+    summary: 'Highlights, Fotos und Danke an alle Helfer:innen.',
+    image: '/images/news-preview.svg',
+    link: '/news/sommerlager-2024'
+  }
+];
+---
+
+<BaseLayout title="News | Pfarrjugend Zirl" description="News und Rückblicke der Pfarrjugend Zirl.">
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 xl:px-0">
+      <p class="text-sm font-semibold text-emerald-600">News</p>
+      <h1 class="mt-2 text-3xl font-semibold text-slate-900 lg:text-4xl">Alle News im Überblick</h1>
+      <p class="mt-3 max-w-2xl text-base text-slate-600">
+        Hier findest du alle Beiträge, Rückblicke und Updates der Pfarrjugend Zirl.
+      </p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        {newsItems.map((item) => (
+          <article class="rounded-2xl border border-emerald-100 bg-white/95 p-6 shadow-[0_8px_30px_0px_rgba(15,23,42,0.08)]">
+            <img class="h-40 w-full rounded-xl object-cover" src={item.image} alt={`Bild zu ${item.title}`} />
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-emerald-600">{item.date}</p>
+            <h2 class="mt-2 text-xl font-semibold text-slate-900">{item.title}</h2>
+            <p class="mt-3 text-sm text-slate-600">{item.summary}</p>
+            <a class="mt-5 inline-flex items-center text-sm font-semibold text-emerald-700" href={item.link}>
+              Beitrag lesen
+              <span class="ml-2">→</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

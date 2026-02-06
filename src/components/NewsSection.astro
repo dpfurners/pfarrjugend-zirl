@@ -1,0 +1,66 @@
+---
+const newsItems = [
+  {
+    title: 'Jungschar Fasching',
+    date: '06. Februar 2026',
+    description:
+      'Bunte Kostüme, Spiele und viel Spaß im Pfarrsaal – danke für euren Besuch!',
+    image: '/images/news-preview.svg',
+    link: '/news/jungschar-fasching-2026'
+  },
+  {
+    title: 'Sternsingen 2026',
+    date: '03.–06. Januar 2026',
+    description:
+      'Wir waren unterwegs, um den Segen in die Häuser zu bringen. Danke für eure Unterstützung!',
+    image: '/images/news-preview.svg',
+    link: '/news/sternsingen-2026'
+  },
+  {
+    title: 'Rückblick: Sommerlager 2024',
+    date: '20. August 2024',
+    description:
+      'Fotos, Highlights und Danke an alle Helfer:innen – das Lager war ein voller Erfolg!',
+    image: '/images/news-preview.svg',
+    link: '/news/sommerlager-2024'
+  }
+];
+---
+
+<section id="news" class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 xl:px-0">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <div>
+        <p class="text-sm font-semibold text-emerald-600">Vergangene Events</p>
+        <h2 class="mt-2 text-3xl font-semibold text-slate-900 lg:text-4xl">
+          News aus der Pfarrjugend Zirl
+        </h2>
+        <p class="mt-3 max-w-2xl text-base text-slate-600">
+          Rückblicke, Fotos und Infos zu unseren letzten Aktionen. Neue Beiträge lassen sich
+          einfach ergänzen, indem du eine weitere News-Karte hinzufügst.
+        </p>
+      </div>
+      <a
+        class="inline-flex items-center justify-center rounded-[0.625rem] border border-emerald-200 bg-white px-4 py-2.5 text-sm font-medium text-emerald-700 shadow-[0_2px_10px_0px_rgba(0,0,0,0.05)] transition hover:border-emerald-300 hover:bg-emerald-50"
+        href="mailto:pfarrjugend@pfarre-zirl.at"
+      >
+        News vorschlagen
+      </a>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      {newsItems.map((item) => (
+        <article class="rounded-2xl border border-emerald-100 bg-white/95 p-6 shadow-[0_8px_30px_0px_rgba(15,23,42,0.08)]">
+          <img class="h-40 w-full rounded-xl object-cover" src={item.image} alt={`Bild zu ${item.title}`} />
+          <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-emerald-600">{item.date}</p>
+          <h3 class="mt-2 text-xl font-semibold text-slate-900">{item.title}</h3>
+          <p class="mt-3 text-sm text-slate-600">{item.description}</p>
+          <a class="mt-5 inline-flex items-center text-sm font-semibold text-emerald-700" href={item.link}>
+            Mehr erfahren
+            <span class="ml-2">→</span>
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
